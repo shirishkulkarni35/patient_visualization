@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Patient Details</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <h1>Patient Details</h1>
+    <p>Please fill out this form with the required information of patients</p>
+    <form action='/' method="post">
+      <fieldset>
+        <legend>Personal Details</legend>
+        <label for="first-name">First Name: <input id="first-name" name="fName" type="text" required /></label>
+        <label for="last-name">Last Name: <input id="last-name" name="lName" type="text" required /></label>
+        <label for="email">E-mail: <input id="email" name="eMail" type="email" required /></label>
+        <label for="mobile">Mobile: <input id="mobile" name="mobile" type="number" required /></label>
+        <label>Gender: </label><br>
+        <label for="male"><input id="male" type="radio" name="gender" value="Male" class="inline" /> Male</label>
+        <label for="female"><input id="female" type="radio" name="gender" value="Female" class="inline" /> Female</label>
+        <label for="others"><input id="others" type="radio" name="gender" value="Others" class="inline" /> Others</label>
+        <label for="age">Age: <input id="age" type="number" name="age" min="13" max="120" /></label>
+        <label for="address">Current address :
+          <textarea id="address" name="address" rows="3" cols="30" placeholder="Patient's address here "></textarea>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Medication Details</legend>
+        <label>Smoker: </label><br>
+        <label for="smoke_y"><input id="smoke_y" type="radio" name="smoker" value="Yes" class="inline" /> Yes</label>
+        <label for="smoke_n"><input id="smoke_n" type="radio" name="smoker" value="No" class="inline" /> No</label>
+        <label>Consumption of Alcohol: </label><br>
+        <label for="alcohol_y"><input id="alcohol_y" type="radio" name="alcohol" value="Yes" class="inline"/> Yes</label>
+        <label for="alcohol_n"><input id="alcohol_n" type="radio" name="alcohol" value="No"  class="inline" /> No</label>
+        <label for="sugar">Sugar level: <input id="sugar" name="sugar" type="number" required/></label>
+        <label for="bp">Blood pressure: <input id="bp" name="bp" type="number" required /></label>
+        <label for="allergy">Allergy for medication :
+          <textarea id="allergy" name="=allergy" rows="3" cols="30" placeholder="If Patient have allergy for medication mention it else mention NA"></textarea>
+        </label>
+        <fieldset>
+          <legend>Select the Diagnosed disease:</legend>
+          <label for="diabetic"><input type="radio" id="diabetic" name="disease" value="Diabetic" class="inline"> Diabetic</label>
+          <label for="covid"><input type="radio" id="covid" name="disease" value="Covid" class="inline"> Covid</label>
+          <label for="v_fever"><input type="radio" id="v_fever" name="disease" value="Viralfever" class="inline"> Viral Fever</label>
+          <label for="d_fever"><input type="radio" id="d_fever" name="disease" value="Denguefever" class="inline"> Dengue Fever</label>
+          <label for="ortho"><input type="radio" id="ortho" name="disease" value="Ortho" class="inline"> Ortho</label>
+      </fieldset>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
