@@ -22,7 +22,7 @@ const patientSchema = {
     sugarLevel: Number,
     bloodPressure: Number,
     allergy: String,
-    dDisease: String
+    disease: String
     
 }
 const patient_model = mongoose.model("patient_details", patientSchema);
@@ -47,7 +47,7 @@ app.post("/",function(req,res){
         sugarLevel: req.body.sugar,
         bloodPressure: req.body.bp,
         allergy: req.body.allergy,
-        dDisease: req.body.disease
+        disease: req.body.disease
         
 
     });
@@ -55,7 +55,15 @@ app.post("/",function(req,res){
     res.redirect("/");
 });
 
+app.get("/patientData", async(req, res) => {
+    const getAllPatient = await patient_model.find();
+    return res.json(getAllPatient);
+});
 
+app.get("/patientVisuals",function(req,res){
+    console.log("hello world");
+    res.sendFile(__dirname + '/public/chart.html');
+})
 
 app.listen(3000, function(){
     console.log("Server is running");
