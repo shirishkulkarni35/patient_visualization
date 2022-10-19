@@ -7,7 +7,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(__dirname + '/public'));
 
 
-
+// MongoDB connection
 mongoose.connect("mongodb+srv://shirish_35:shirish35@cluster0.bs1p3.mongodb.net/patient",{useNewUrlParser:true},{useUnifiedTopology:true});
 // create a data schema
 const patientSchema = {
