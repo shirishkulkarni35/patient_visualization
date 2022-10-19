@@ -50,6 +50,7 @@ input, textarea {
   background-color: #050536;
   border: 1px solid #050536;
   color: #ffffff;
+  border-color: white;
 }
 
 .inline {
@@ -74,8 +75,15 @@ input[type="file"] {
 }
 input[type="submit"] {
   background-color: #050536;
+  cursor: pointer;
 }
 
 a{
   color:#dfdfe2;
+}
+input[type="submit"]:hover{
+  color: #151538;
+  background-color: white;
+  transition: 0.5;
+  width: 30%;
 }
