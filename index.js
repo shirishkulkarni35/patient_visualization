@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser');
+const {TextDecoder, TextEncoder} = require("util");
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(__dirname + '/public'));
